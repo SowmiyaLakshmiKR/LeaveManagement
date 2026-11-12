@@ -6,7 +6,7 @@
 // IMPORTANT:
 // Replace this with your Codespaces forwarded
 // backend port 5000 URL before browser testing.
-const API_URL = "https://fictional-funicular-97xgpj5pwjv729554-5000.app.github.dev/api";
+const API_URL = "https://leavemanagement-zzmc.onrender.com";
 
 
 // ========================================
