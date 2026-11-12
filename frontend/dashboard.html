@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Leave Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <h2>Leave Management</h2>
+        <div>
+            <span id="userName">Welcome</span>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <h1>My Dashboard</h1>
+        <p>View your leave balances and applications.</p>
+
+        <section class="balance-container">
+            <div class="balance-card">
+                <h3>Casual Leave</h3>
+                <h1 id="casualBalance">10</h1>
+                <p>Available days</p>
+            </div>
+            <div class="balance-card medical">
+                <h3>Medical Leave</h3>
+                <h1 id="medicalBalance">10</h1>
+                <p>Available days</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Apply for Leave</h2>
+            <form id="leaveForm">
+                <label>Leave Type</label>
+                <select id="leaveType" required>
+                    <option value="">Select leave type</option>
+                    <option value="Casual">Casual Leave</option>
+                    <option value="Medical">Medical Leave</option>
+                </select>
+
+                <label>Start Date</label>
+                <input type="date" id="startDate" required>
+
+                <label>End Date</label>
+                <input type="date" id="endDate" required>
+
+                <label>Reason</label>
+                <textarea id="reason" placeholder="Enter reason" required></textarea>
+
+                <button type="submit">Submit Application</button>
+            </form>
+            <p id="leaveMessage"></p>
+        </section>
+
+        <section class="history-section">
+            <h2>Leave Application History</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Days</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaveHistory">
+                        <tr><td colspan="6">Loading applications...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
