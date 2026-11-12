@@ -11,8 +11,9 @@ app.use(cors({
     origin: [
         "http://localhost:5500",
         "http://127.0.0.1:5500",
-        "https://fictional-funicular-97xgpj5pwjv729554-5500.app.github.dev"
-    ]
+        "https://leavemanagement-frontend-pi.vercel.app",
+        process.env.FRONTEND_URL
+    ].filter(Boolean)
 }));
 
 app.use(express.json());
